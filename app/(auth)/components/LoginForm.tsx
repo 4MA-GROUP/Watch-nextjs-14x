@@ -70,15 +70,20 @@ const LoginForm = () => {
   
   return (
     <div className=" mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+      
       <div
-      className="
-      bg-white
-        px-4
-        py-8
-        shadow
-        sm:rounded-lg
-        sm:px-10"
-        >
+  className="
+    bg-white
+    px-4
+    py-8
+    sm:rounded-lg
+    sm:px-10
+    drop-shadow-md
+    shadow-2xl
+    shadow-blue-500/70
+    hover:shadow-cyan-600/100"
+    
+>
           <form
           onSubmit={handleSubmit(onSubmit)}
           className="space-y-6" 
@@ -122,12 +127,12 @@ const LoginForm = () => {
                   <div className="w-full border-t border-gray-500" />
                 </div>
                 <div className="relative flex justify-center text-sm">
-                  <span className="bg-white px-2 text-gray-700">
+                  <span className="bg-white rounded-md px-2 text-gray-700">
                     Or continue with
                   </span>
                 </div>
               </div>
-    
+            
               <div className="mt-6 flex gap-2">
                 <AuthSocialButton 
                   icon={BsGoogle} 

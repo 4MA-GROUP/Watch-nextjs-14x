@@ -65,9 +65,13 @@ const RegisterForm = () => {
       bg-white
         px-4
         py-8
-        shadow
+        drop-shadow-md
         sm:rounded-lg
-        sm:px-10"
+        sm:px-10
+        shadow-2xl
+    shadow-blue-500/70
+    hover:shadow-cyan-600/100"
+        
         >
           <form
           onSubmit={handleSubmit(onSubmit)}
@@ -103,6 +107,7 @@ const RegisterForm = () => {
               <Button
                disabled={isLoading} fullWidth type="submit"
                 >
+                  
                   {isLoading ? "Loading..." : "Sign up"}
                 </Button>
             </div>

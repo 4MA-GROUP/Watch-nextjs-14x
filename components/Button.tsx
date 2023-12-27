@@ -25,6 +25,8 @@ const Button: React.FC<ButtonProps> = ({
       type={type}
       disabled={disabled}
       className={clsx(`
+      shadow-sm 
+      hover:shadow-inner
         flex 
         justify-center 
         rounded-md 
