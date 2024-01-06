@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { WiDayCloudy } from "react-icons/wi";
+import { IoIosCloudyNight } from "react-icons/io";
 
 const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);
@@ -18,9 +20,8 @@ const ThemeSwitcher = () => {
     <div className="flex items-center">
       <button
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        className="border-[1px] bg-black dark:bg-white text-white dark:text-black dark:!border-white rounded-md transition-all p-1 px-3 focus:ring-4"
       >
-        {theme === "dark" ? "Light Mode" : "Dark Mode"}
+        {theme === "light" ? <WiDayCloudy className="text-yellow-500 mr-2" size={24} /> : <IoIosCloudyNight className="text-gray-300 mr-2" size={24} />}
       </button>
     </div>
   );

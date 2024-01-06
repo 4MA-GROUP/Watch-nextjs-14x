@@ -45,7 +45,8 @@ const LoginForm = () => {
         }
 
         if (callback?.ok) {
-          router.push('/')
+          router.push('/');
+          router.refresh();
         }
       })
       .finally(() => setIsLoading(false))
@@ -61,10 +62,11 @@ const LoginForm = () => {
         }
 
         if (callback?.ok) {
-          router.push('/')
+          router.push('/');
+          router.refresh();
         }
       })
-      .finally();
+      .finally(() => setIsLoading(false));
   } 
 
   
